@@ -1,0 +1,39 @@
+{
+  "scan_id": "SAMPLE-0001",
+  "url": "https://example.com/",
+  "started_at": "2025-11-07T12:00:00Z",
+  "finished_at": "2025-11-07T12:00:02Z",
+  "status": "done",
+  "score": 100,
+  "checks": {
+    "links": {
+      "category": "links",
+      "severity": "pass",
+      "metrics": { "total_links": 12, "broken_links": 0 },
+      "items": [],
+      "suggestions": ["No action needed."]
+    },
+    "perf": {
+      "category": "perf",
+      "severity": "warn",
+      "metrics": { "elapsed_ms": 2600, "bytes": 184320 },
+      "items": ["Load time slightly above target (2.5s)."],
+      "suggestions": ["Compress hero images; defer noncritical scripts."]
+    },
+    "analytics": {
+      "category": "analytics",
+      "severity": "fail",
+      "metrics": { "ga4_found": false, "gtm_found": false },
+      "items": ["No GA4 (G-*) or GTM snippet detected."],
+      "suggestions": ["Install GA4 or GTM in <head>; verify with Tag Assistant."]
+    },
+    "seo": {
+      "category": "seo",
+      "severity": "warn",
+      "metrics": { "title_len": 8, "meta_description_len": 0, "h1_count": 1 },
+      "items": ["Title short (ideal 10–65).", "Missing meta description."],
+      "suggestions": ["Write a 50–160 char meta description."]
+    }
+  },
+  "errors": []
+}
